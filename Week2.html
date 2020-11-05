@@ -1,0 +1,137 @@
+<!--Doctype html-->'
+<html>
+<head>
+<title>
+Week 1 HomeWork
+</title>
+</head>
+<body>
+    <style>
+        h1{
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color:#3e51de;
+        }
+        h2{
+            text-align: center;
+        }
+        .h1{
+            color: black;
+        }
+.para{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    padding: auto;
+    border-radius:10px;
+    max-width: 400px;
+    margin: 0 auto;
+   
+ 
+}
+
+.p1:hover{
+    background-color: blanchedalmond;
+    border-radius: 10px;
+   box-shadow: 0 0 10px;
+}
+.p2:hover{
+    background-color: blanchedalmond;
+    border-radius: 10px;
+   box-shadow: 0 0 10px;
+}
+.p3:hover{
+    background-color: blanchedalmond;
+    border-radius: 10px;
+   box-shadow: 0 0 10px;
+   
+
+}
+.last{
+    text-align: center;
+    font-size: 18px;
+}
+
+#btn{
+	display: block;
+	padding: 20px 30px;
+	color: #FFFFFF;
+	font-size: 20px;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+	border: 1px solid #3e51de;
+	background: #3e51de;
+	margin: 0 auto 30px auto;
+	border-radius: 30px;	
+}
+
+#btn:hover{
+	background-color: #80142d;
+	color: white;
+    cursor: pointer;
+}
+
+    </style>
+    
+<h2>
+    &#x26C5;
+</h2>
+    <h1>
+Currently 21&#xb0 in Tokyo
+<div class="h1">
+    13 &#xb0  / 23 &#xb0
+</div>
+</h1>
+<section class="para">
+<p class="p1"> 
+    &#x1F327;&#xFE0F;
+     Tomorrow <br>
+    10 &#xb0  / 22 &#xb0
+</p>
+<br>
+<p class="p2">
+    &#x26C5;
+    Saturday<br>
+    15 &#xb0  / 17 &#xb0
+</p>
+<br>
+<p class="p3">
+    &#x2600;&#xFE0F;
+    Sunday <br>
+    25 &#xb0  / 28 &#xb0
+</p>
+</section>
+<br>
+<button id="btn">Change City</button>
+<br>
+<section class= "last">
+    Coded by Abhijeet Awal
+</section>
+<script>
+    function updateHeading(newHeading){
+        let h1 = document.querySelector("h1");
+        h1.innerHTML = newHeading;
+    }
+    function updatePara(newPara){
+        let h2 = document.querySelector("h2");
+        h2.innerHTML = newPara;
+    }
+    function changeValue(){
+        let city = prompt("Which city do you live in?");
+
+        if(temp < 0){
+            updatePara(`&#128542`);
+            updateHeading(`Currently ${temp}&#8451 in ${city}`);
+        }
+        else{
+            updatePara(`&#128522`);
+            updateHeading(`Currently ${temp}&#8451 in ${city}`);
+        }
+
+    }
+    let changeButton = document.querySelector("#btn");
+    changeButton.addEventListener("click", changeValue);
+</script>
+</body>
+</html>
